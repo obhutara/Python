@@ -1,0 +1,31 @@
+
+thou(5847 times)
+thy(4358 times)
+shall(3845 times)
+thee(3386 times)
+lord(3159 times)
+
+thou(5847 times)
+->art(592 times)
+->hast(393 times)
+->shalt(253 times)
+
+thy(4358 times)
+->hand(86 times)
+->life(67 times)
+->name(66 times)
+
+shall(3845 times)
+->see(95 times)
+->find(94 times)
+->go(72 times)
+
+thee(3386 times)
+->thou(139 times)
+->thy(136 times)
+->well(74 times)
+
+lord(3159 times)
+->hamlet(83 times)
+->king(57 times)
+->lord(49 times)

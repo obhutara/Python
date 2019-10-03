@@ -1,0 +1,49 @@
+--Question 1:
+SELECT *
+FROM jbemployee;
+
+--Question 2:
+SELECT name
+FROM jbdept;
+
+--Question 3:
+SELECT name
+FROM jbparts
+WHERE qoh=0;
+
+--Question 4:
+SELECT name
+FROM jbemployee
+WHERE salary BETWEEN 9000 AND 10000;
+
+--Question 5:
+SELECT name,startyear,age=2019-startyear
+FROM jbemployee
+
+--Question 6:
+SELECT name,supplier
+FROM jbitem
+WHERE IN (SELECT supplier FROM jbsupplier WHERE supplier=89;);
+
+--Question 9:
+SELECT name
+FROM jbcity
+WHERE IN (SELECT city FROM jbsupplier;);
+
+--Question 10:
+SELECT name,color
+FROM jbparts
+WHERE weight > (SELECT weight FROM jbparts WHERE name="card reader");
+
+--Quesiton 11:
+SELECT name,color
+FROM jbparts
+ORDER BY weight DESC
+LIMIT 4
+
+12) What is the average weight of black parts?
+--Quesiton 12:
+SELECT name,color,weight
+FROM jbparts
+GROUP BY color
+WHERE color="black"

@@ -1,0 +1,42 @@
+Question:
+In addition, you should provide a brief answer to the following questions:
+
+In what way did you "clean up" or divide up the text into words (in the program; the text files should be left unaffected)? 
+This does not have to be perfect in any sense, but it should at least avoid counting "lord", "Lord" and "lord." as different words.
+Which data structures have you used (such as lists, tuples, dictionaries, sets, ...)? Why does that choice make sense? 
+You do not have to do any extensive research on the topics, or try to find exotic modern data structures, but you should 
+reflect on which of the standard data types (or variants thereof) make sense. If you have tried some other solution and updated 
+your code later on, feel free to discuss the effects!
+
+
+Answer:
+The text file is first read in to the system. This is then passed through 2 methods.
+
+The first of which is called 'transform' ensures that the text is stripped off of all non-alphanumeric charectars, 
+converted to lowercase and each word is decomposed and stored in a list.
+This makes the process of counting the words and subsequent words quite easy.
+
+The second function is to remove conjunctions and words that are used in the english language often but do not carry much information. An example
+of such words can be 'a','i','and','they' etc. A list of words has been used as the words can be accessed through indices in loops quite easily.
+
+The Counter type data structure is used from the module collections. This has a dictionary like format and is suitable for efficient and easy operations
+required in this task.
+Tuples and nested lists were considered at first but accessing the values in an iterative manner proved to be difficult.
+
+A nested dictionary of word and successive words with frequencies is built to implemnet a faster run time.
+
+Answers to comments:
+-error messages of 'file doesnt exist!' , 'missing file argument' are taken care of.
+-Printing output into a new text file is done, error message for missing output filename argument is given.
+
+* I rarely get to generate any sequences longer than a few
+words. (Might be a very simple fix.)
+
+- This is fixed in the first 'generate_text.py' code. generate_text2 is also created which has a slightly faster runtime and generates sentance with
+user specified max_words number of words. This solutions uses random.choice instead of random.random.
+
+But this solution seems to lag when a large number of max_words are specified and does rarely produce output in a case with no nextwords. This may be
+due to text cleaning procedure.
+
+- A final solution is created 'generate_textclass.py' which uses join and format instead of continous string concatenations.
+This solution also reduces unncessary function calls and employs a nested dictionary to function as a lookup for faster runtimes.
